@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>some questions</title>
+
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body id="body" class=" bg-gray-200 min-h-screen">
+    <!-- header section -->
+    <header id="header" class="mx-10">
+        <nav class="flex flex-row justify-between mx-auto p-6  bg-white rounded-xl">
+            <div class="flex gap-4  justify-center items-center">
+                <img src="./assets/logo.png" alt="">
+                <h1 class="text-5xl ">Dev<span class="font-bold">Board</span></h1>
+            </div>
+
+            <div class="flex gap-4  justify-center items-center">
+                <button id="desk-btn" class="btn btn-primary bg-blue-600 text-white  text-2xl p-6">Back to Desk</button>
+                <button id="color-change-btn"><img class="w-2/3" src="./assets/theme-btn.png" alt=""></button>
+            </div>
+        </nav>
+    </header>
+    <!-- main section -->
+    <section class="bg-white mx-10 rounded-2xl p-6 mt-10">
+        <p class="bg-neutral-300 rounded-2xl p-4 text-3xl font-bold text-center my-6">Blogs</p>
+        <!-- question 1 -->
+        <div>
+            <p class="p-4 bg-gray-300 mb-3 rounded-xl font-bold text-xl">Question-1: What are the different ways to select an element in the DOM?
+            </p>
+            <p class="text-xl text-gray-500 p-4 bg-slate-200 mb-3 rounded-xl">
+                1. getElementById('id') – Selects an element by its unique ID. <br>
+                2. querySelector('selector') & querySelectorAll('selector') – Selects the first or all matching elements
+                using CSS selectors. <br>
+                3. getElementsByClassName('class'), getElementsByTagName('tag'), & getElementsByName('name') – Select
+                elements by class, tag, or name attribute.
+            </p>
+        </div>
+        <!-- Question 2 -->
+        <div>
+            <p class="p-4 bg-gray-300 mb-3 rounded-xl font-bold text-xl">Question-2: What is the difference between innerHTML, innerText, and
+                textContent ?</p>
+            <p class="text-xl text-gray-500 p-4 bg-slate-200 mb-3 rounded-xl">
+                1. innerHTML – Returns or sets the HTML content inside an element, including tags (<b>bold</b> will be
+                rendered as bold). <br>
+                2. innerText – Returns or sets only the visible text inside an element, ignoring hidden elements and
+                maintaining formatting. <br>
+                3. textContent – Returns or sets all text inside an element, including hidden text, but treats
+                everything as plain text (ignores HTML tags).
+            </p>
+        </div>
+        <!-- Question 3 -->
+        <div>
+            <p class="p-4 bg-gray-300 mb-3 rounded-xl font-bold text-xl">Question-3: What is event delegation in the DOM?
+
+            </p>
+            <p class="text-xl text-gray-500 p-4 bg-slate-200 mb-3 rounded-xl">
+                Event delegation is a technique where a parent element handles events for its child elements, using
+                event bubbling. This improves performance by attaching a single event listener to the parent instead of
+                multiple listeners on individual child elements.
+            </p>
+        </div>
+        <!-- Question 4 -->
+        <div>
+            <p class="p-4 bg-gray-300 mb-3 rounded-xl font-bold text-xl">Question-4: What is event bubbling in the DOM?
+
+            </p>
+            <p class="text-xl text-gray-500 p-4 bg-slate-200 mb-3 rounded-xl">
+                Event bubbling is a DOM mechanism where an event triggered on a child element propagates up through its
+                ancestor elements. It starts from the target element and moves up to the root (document), allowing
+                parent elements to respond to events fired on their children.
+            </p>
+        </div>
+        <!-- Question 5 -->
+        <div>
+            <p class="p-4 bg-gray-300 mb-3 rounded-xl font-bold text-xl">Question-5: How do you create, add, and remove elements using JavaScript?
+            </p>
+            <p class="text-xl text-gray-500 p-4 bg-slate-200 mb-3 rounded-xl">
+                1. Create an element – Use document.createElement('tag'), e.g., const div = document.createElement('div');. <br>
+                2. Add an element – Use parent.appendChild(child) or parent.append(child), e.g.,
+                document.body.appendChild(div);. <br>
+                3. Remove an element – Use element.remove() or parent.removeChild(child), e.g., div.remove();.
+            </p>
+        </div>
+    </section>
+
+    <script src="./JavaScript/color-wheel.js"></script>
+    <script>
+        document.getElementById('desk-btn').addEventListener('click', function () {
+            window.location.href = "./index.html"
+        })
+    </script>
+</body>
+
+</html>

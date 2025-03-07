@@ -9,3 +9,5 @@ function randomColor(){
 document.getElementById('color-change-btn').addEventListener('click', function(){
     document.getElementById('body').style.background = randomColor();
 });
+
+

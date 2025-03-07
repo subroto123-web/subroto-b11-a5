@@ -56,10 +56,10 @@
             <p class="text-xl font-bold">05</p>
           </div>
         </div>
-        <div class=" p-4 bg-[#6C7FFA] flex gap-4 rounded-lg items-center">
+        <button id="discover-click" class="cursor-pointer p-4 bg-[#6C7FFA] flex gap-4 rounded-lg items-center">
           <img src="./assets/board.png" alt="">
-          <p class="font-bold text-white ">Discover Something New Today!</p>
-        </div>
+          <p class=" text-white text-2xl">Discover Something New Today!</p>
+        </button>
         <div class="flex items-center gap-3 p-4">
           <img src="./assets/calender.png" alt="">
           <div>
@@ -163,8 +163,24 @@
 
       </div>
     </section>
-    <section class="w-1/5 bg-white rounded-2xl"></section>
+    <section class="w-1/5 bg-white rounded-2xl">
+      <div class="p-5 text-center gap-3 flex justify-center items-center flex-col mt-5">
+        <div class="flex flex-row gap-3">
+          <img src="./assets/activity.png" alt="">
+          <p>Activity Log</p>
+        </div>
+        <button class="btn btn-primary bg-blue-600 text-white p-4">Clear History</button>
+      </div>
+      <div class="p-6 flex flex-col">
+
+      </div>
+    </section>
   </main>
+  <script>
+    document.getElementById('discover-click').addEventListener('click', function () {
+            window.location.href = "./questions.html"
+        })
+  </script>
   <script src="./JavaScript/color-wheel.js"></script>
 </body>
 
